@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 5</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+        // Se você quiser escrever dois cabeçalhos, você deve colocá-los dentro de um elemento pai, como o div. 
+        const meuElemento = (
+            <div>
+                <h1>Eu sou um cabeçalho</h1>
+                <h1>Eu também sou um cabeçalho</h1>
+            </div>
+        );
+
+        ReactDOM.render(meuElemento, document.getElementById("root"));
+
+    </script>
+    
+</body>
+</html>

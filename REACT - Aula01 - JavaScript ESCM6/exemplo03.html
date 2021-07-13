@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 03</title>
+</head>
+<body>
+    <h1>Herança</h1>
+    <script>
+
+        // Classe Pai (Carro)
+        class Carro{
+            constructor(nome){
+                this.marca = nome;
+            }
+        
+            apresentar(){
+                return 'Eu tenho um ' + this.marca + ".";
+            }
+        }
+
+        // Classe Filha (Modelo)
+        class Modelo extends Carro{
+            constructor(nome, mod){
+                // Chama o 'constructor' ca classe pai (Carro).
+                super(nome);
+                this.modelo = mod;
+            }
+
+            mostrar(){
+                // Chama o método "apresentar" da classe pai (Carro)
+                return this.apresentar() + ', ele é um ' + this.modelo;
+            }
+
+        }
+
+        meuCarro = new Modelo("Chevrolet", "Monza")
+        document.write(meuCarro.mostrar());
+
+    </script>
+</body>
+</html>

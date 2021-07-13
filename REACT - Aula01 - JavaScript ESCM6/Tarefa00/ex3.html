@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 01 - Ex. 03</title>
+</head>
+<body>
+
+    <script>
+        class Funcionario{
+            constructor(nome, numCTPS, salario){
+                this.nome = nome;
+                this.numCTPS = numCTPS;
+                this.salario = salario;
+            }
+            mostrarDados(){
+                return "Nome: " + this.nome + "<br/>CTPS: " + this.numCTPS + "<br/>Salario: " + this.salario;
+            }
+        }
+        class FuncionarioComissionado extends Funcionario{
+            constructor(nome, numCTPS, salario, venda, comissao){
+                super(nome, numCTPS, salario);
+                this.venda = venda;
+                this.comissao = comissao;
+            }
+            mostrarDados(){
+                return "<br/>Nome: " + this.nome + "<br/>CTPS: " + this.numCTPS + "<br/>Salario: " + this.salario + "<br/>Venda: " + this.venda + "<br/>Comissao: " + this.comissao;
+            }
+        }
+
+        f1 = new Funcionario("Anderson", 137458, "R$2000,00");
+        f2 = new FuncionarioComissionado("Maria", 2569874, "R$3500,00", "R$6000,00", "R$600,00");
+
+        document.write(f1.mostrarDados(),"<br/>", f2.mostrarDados());
+    </script>
+</body>
+</html>

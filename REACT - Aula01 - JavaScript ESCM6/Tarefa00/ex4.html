@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa 01 - Ex. 04</title>
+</head>
+<body>
+
+    <script>
+        class Poligono{
+            constructor(altura, largura){
+                this.altura = altura;
+                this.largura = largura;
+                this.nome = "Poligono";
+            }
+            mostrarNome(){
+                return "Olá, eu sou um " + this.nome;
+            }
+        }
+
+        class Quadrado extends Poligono{
+            constructor(comprimento){
+                super(comprimento, comprimento);
+                this.nome = "Quadrado";
+            }
+
+            get area() {
+                console.log("Quadrado - get area");
+                return this.altura * this.largura;                
+            }
+            set area(valor) {
+                console.log("Quadrado - set area: " +valor);
+                this.area = valor;
+            }
+        }
+        p1 = new Poligono(5, 5);
+        q1 = new Quadrado(5);
+
+        document.write(p1.mostrarNome(), q1.mostrarNome(), q1.area);
+
+    </script>
+</body>
+</html>
